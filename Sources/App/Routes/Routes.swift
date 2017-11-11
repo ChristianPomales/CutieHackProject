@@ -1,4 +1,5 @@
 import Vapor
+import JSON
 
 extension Droplet {
     func setupRoutes() throws {
