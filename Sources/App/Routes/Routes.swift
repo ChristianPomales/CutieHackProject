@@ -10,10 +10,15 @@ extension Droplet {
         }
       
         get("cutiehack") { request in
-          guard let name = request.data["name"]?.string else {
+          guard let classification = request.data["Classification"]?.string else {
             throw Abort(.badRequest)
           }
-          return "Hello, \(name)!"
+          
+          if (classification == "happy") {
+            return "😂"
+          } else {
+            return "Hello, \(classification)!"
+          }
         }
 
         get("plaintext") { req in
