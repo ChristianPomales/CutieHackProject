@@ -9,7 +9,7 @@ extension Droplet {
             return json
         }
       
-        get("cutiehack") { request in
+        post("cutiehack") { request in
           guard let classification = request.data["Classification"]?.string else {
             throw Abort(.badRequest)
           }
