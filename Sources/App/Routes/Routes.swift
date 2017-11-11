@@ -7,6 +7,13 @@ extension Droplet {
             try json.set("hello", "world")
             return json
         }
+      
+        drop.get("cutiehack") { request in
+          guard let name = request.data["name"]?.string else {
+            throw Abort(.badRequest)
+          }
+          return "Hello, \(name)!"
+        }
 
         get("plaintext") { req in
             return "Hello, world!"
