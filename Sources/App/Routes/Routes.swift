@@ -14,12 +14,6 @@ extension Droplet {
             throw Abort(.badRequest)
           }
           
-          if classification == "happy" {
-            return "😂"
-          } else {
-            return "Hello, \(classification)!"
-          }
-          
           switch classification {
             case "Happy":
               return "🙃"
