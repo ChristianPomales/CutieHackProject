@@ -14,11 +14,31 @@ extension Droplet {
             throw Abort(.badRequest)
           }
           
-          if (classification == "happy") {
+          if classification == "happy" {
             return "😂"
           } else {
             return "Hello, \(classification)!"
           }
+          
+          switch classification {
+            case "Happy"
+              return "🙃"
+            case "Sad"
+              return "😓"
+            case "Fear"
+              return "🤡"
+            case "Neutral"
+              return "😶"
+            case "Disgust"
+              return "🤢"
+            case "Angry"
+              return "😡"
+            case "Surprise"
+              return "😱"
+            default:
+              return "🤷‍♂️"
+          }
+          
         }
 
         get("plaintext") { req in
