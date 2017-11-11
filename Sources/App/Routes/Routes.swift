@@ -21,19 +21,19 @@ extension Droplet {
           }
           
           switch classification {
-            case "Happy"
+            case "Happy":
               return "🙃"
-            case "Sad"
+            case "Sad":
               return "😓"
-            case "Fear"
+            case "Fear":
               return "🤡"
-            case "Neutral"
+            case "Neutral":
               return "😶"
-            case "Disgust"
+            case "Disgust":
               return "🤢"
-            case "Angry"
+            case "Angry":
               return "😡"
-            case "Surprise"
+            case "Surprise":
               return "😱"
             default:
               return "🤷‍♂️"
